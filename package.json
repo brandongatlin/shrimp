@@ -1,0 +1,29 @@
+{
+  "name": "shrimp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandongatlin/shrimp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandongatlin/shrimp/issues"
+  },
+  "homepage": "https://github.com/brandongatlin/shrimp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chalk-animation": "^1.6.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.7"
+  }
+}
