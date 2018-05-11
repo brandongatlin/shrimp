@@ -11,48 +11,48 @@ const db = require( "../models" );
 // const logger = require( "morgan" );
 
 router.get( "/", function ( req, res ) {
-  db.Shrimp.findAll( {} ).then( function ( shrimp ) {
-
-    let hbsObject = {
-      shrimp: shrimp
+  db.Shrimp.findAll( {
+    where: {
+      spiciness: "mild"
     }
-    log( chalk.blue( hbsObject ) )
-    res.render( "index", hbsObject )
+  } ).then( function ( mild ) {
 
+    let mildObj = {
+      mildShrimp: mild
+    }
+    res.render( "./layouts/partials/mildmenu", mildObj )
   } )
 
-} );
 
-//example
-// router.get( "/driver-info-page", function ( req, res ) {
-//   // findAll returns all entries for a table when used with no options
-//   db.Student.findAll( {
-//     where: {
-//       busrider: true
-//     }
-//   } ).then( function ( dbStu ) {
-//     chalkAnimation.rainbow( "Student Table Queried", 2 );
-//     // console.log("dbStu =", dbStu[0].student_first_name);
-//
-//     var addresses;
-//     var addressesArr = [];
-//
-//     for ( let addresses of Object.values( dbStu ) ) {
-//       addresses = addresses.address;
-//       addressesArr.push( addresses );
-//
-//     } //end of loop
-//
-//     var hbsObject = {
-//       addresses: addressesArr,
-//       students: dbStu
-//     };
-//
-//     res.render( "driver-info-page", hbsObject );
-//
-//   } );
-//
-// } );
+
+
+
+  // db.Shrimp.findAll( {
+  //   where: {
+  //     spiciness: "hot"
+  //   }
+  // } ).then( function ( hot ) {
+  //
+  //   let hotObj = {
+  //     hotShrimp: hot
+  //   }
+  //   // res.render( "index", hotObj )
+  // } )
+  //
+  //
+  //
+  //
+  //
+  // db.Shrimp.findAll( {} ).then( function ( buttocks ) {
+  //
+  //   let buttObj = {
+  //     shrimp: shrimp
+  //   }
+  //   res.render( "index", hbsObject )
+  // } )
+
+} ); //end / route
+
 
 router.post( "/order", function ( req, res ) {
   console.log( "that's a shrimptastic choice!" );

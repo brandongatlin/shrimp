@@ -30,7 +30,7 @@ $( document ).ready( function () {
       function () {
         console.log( "ordered", order );
         // Reload the page to get the updated list
-        location.reload();
+        // location.reload();
       }
     );
 

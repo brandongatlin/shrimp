@@ -8,6 +8,44 @@
 
 <div class="container">
 
+  <div class="row">
+    <div class="col-md-4">
+      <!-- <h3>Mild</h3>
+      <div id="mild">
+        <ol>
+        {{#each mildShrimp}}
+        <li>
+          {{this.shrimp_name}}, {{this.spiciness}}
+        </li>
+        {{/each}}
+      </ol>
+      </div>
+    </div> -->
+
+    {{> mildmenu}}
+
+    <div class="col-md-4">
+      <h3>Hot</h3>
+      <div id="hot">
+        <ol>
+        {{#each hotShrimp}}
+        <li>
+          {{this.shrimp_name}}, {{this.spiciness}}
+        </li>
+        {{/each}}
+      </ol>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Shot in the Buttocks</h3>
+    </div>
+
+  </div>
+
+
+
+
 <div class="row">
 
   <form class="add-order-form">
@@ -27,26 +65,17 @@
       </div>
 
   <select class="custom-select" id="spiciness">
-    <!-- <option selected>Spiciness...</option> -->
     <option value="Mild">Mild</option>
     <option value="Hot">Hot</option>
-    <option value="I got shot in the buttocks!">I got shot in the buttocks!</option>
+    <option value="I got shot in the buttocks!">Shot in the Buttocks!</option>
   </select>
 
       <button type="submit" id="submit-order" class="btn btn-primary">Order</button>
     </div>
   </div>
-</div>
 
-</div>
 
-<div id="target">
-  {{#each shrimp}}
-    {{this.shrimp_name}}
-  {{/each}}
-</div>
 
-</div>
 
   </body>
 </html>
