@@ -1,6 +1,9 @@
 $( document ).ready( function () {
   console.log( "app.js loaded" );
 
+  $.get( "/", function ( req, res ) {
+
+  } )
 
 
   $( ".add-order-form" ).on( "submit", function ( event ) {
