@@ -4,18 +4,18 @@ module.exports = function ( sequelize, DataTypes ) {
 
   var Shrimp = sequelize.define( 'Shrimp', {
     shrimp_name: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.STRING( 50 ),
-      validate: {
-        len: [ 1, 50 ]
-      }
+      // validate: {
+      //   len: [ 1, 50 ]
+      // }
     },
     spiciness: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.STRING( 50 ),
-      validate: {
-        len: [ 1, 50 ]
-      }
+      // validate: {
+      //   len: [ 1, 50 ]
+      // }
     },
 
   }, {
