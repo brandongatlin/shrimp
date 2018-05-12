@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Lt. Dan's Shrimpboat!</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="display-3">Manager Page</h1>
+      <p class="lead">Make Permanent Changes to the Menu</p>
+    </div>
+
+    <div class="row" id="menu">
+      <div>
+        <h1>Menu:</h1>
+        <div class="col-lg-6">
+          <h3>Mild</h3>
+          <div id="mild">
+            <ol>
+              {{#each menuItems}} {{#unless spicy}}
+              <li>
+                <button class="delete" data-id={{this.id}} item={{this.shrimp_name}}>Delete</button>{{this.shrimp_name}}
+              </li>
+              {{/unless}} {{/each}}
+            </ol>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <h3>Hot</h3>
+          <div id="hot">
+            <ol>
+              {{#each menuItems}} {{#if spicy}}
+              <li>
+                <button class="delete" data-id={{this.id}} item={{this.shrimp_name}}>Delete</button>{{this.shrimp_name}}
+              </li>
+              {{/if}} {{/each}}
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

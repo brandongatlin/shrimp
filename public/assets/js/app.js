@@ -57,4 +57,25 @@ $( document ).ready( function () {
 
 
 
+  $( document ).on( "click", ".delete", function () {
+    console.log( "delete clicked" );
+
+    const id = $( this ).attr( "data-id" );
+    console.log( "this id is:", id );
+
+    $.ajax( {
+      url: '/delete/' + id,
+      type: 'DELETE',
+      crossDomain: true,
+      success: function ( result ) {
+        // Do something with the result
+        console.log( "success ajax!" );
+        location.reload();
+
+      }
+    } );
+
+  } );
+
+
 } )

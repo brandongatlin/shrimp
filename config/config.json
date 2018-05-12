@@ -4,7 +4,6 @@
     "username": "root",
     "password": null,
     "database": "shrimp",
-    "logging": false,
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

@@ -1,4 +1,4 @@
-//new//
+//brandon//
 const express = require( "express" );
 const app = express();
 const bodyParser = require( "body-parser" );
@@ -37,7 +37,7 @@ app.use( "/", routes );
 
 db.sequelize.sync( {
   // force: true,
-  // logging: true
+  logging: console.log
 
 } ).then( function () {
   app.listen( PORT, function () {
