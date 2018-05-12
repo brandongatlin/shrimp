@@ -4,22 +4,35 @@ module.exports = function ( sequelize, DataTypes ) {
 
   var Shrimp = sequelize.define( 'Shrimp', {
     shrimp_name: {
-      allowNull: true,
+      allowNull: false,
       type: DataTypes.STRING( 50 ),
       // validate: {
       //   len: [ 1, 50 ]
       // }
     },
-    spiciness: {
-      allowNull: true,
-      type: DataTypes.STRING( 50 ),
+    spicy: {
+      allowNull: false,
+      type: DataTypes.BOOLEAN(),
+      defaultValue: false,
       // validate: {
       //   len: [ 1, 50 ]
       // }
     },
 
+    info: {
+      allowNull: false,
+      type: DataTypes.TEXT(),
+      defaultValue: "Custom Order",
+    },
+
+    price: {
+      allowNull: false,
+      type: DataTypes.INTEGER(),
+      defaultValue: 10,
+    },
+
   }, {
-    timestamps: true
+    timestamps: false
   } );
 
   return Shrimp;

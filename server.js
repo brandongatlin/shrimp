@@ -22,7 +22,11 @@ app.use( bodyParser.json( {
 } ) );
 
 app.engine( "handlebars", exphbs( {
-  defaultLayout: "main"
+  defaultLayout: "main",
+  partialsDir: [
+        //  path to your partials
+        __dirname + '/views/layouts/partials',
+    ]
 } ) );
 app.set( "view engine", "handlebars" );
 
@@ -40,3 +44,14 @@ db.sequelize.sync( {
     chalkAnimation.rainbow( "App listening on PORT ", 2 + PORT );
   } );
 } );
+
+
+// db.Donation.belongsTo( db.Donor );
+// db.Donor.hasMany( db.Donation );
+// db.Comment.belongsTo( db.User );
+// db.User.hasMany( db.Comment );
+// db.Volunteer.belongsTo( db.User );
+// db.Donor.belongsTo( db.User );
+// db.Destination.belongsTo( db.User );
+// db.Volunteer.hasMany( db.Donation );
+// db.Destination.hasMany( db.Donation )

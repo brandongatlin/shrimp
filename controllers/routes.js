@@ -4,54 +4,21 @@ const express = require( 'express' );
 const router = express.Router();
 const bodyParser = require( "body-parser" );
 const path = require( 'path' );
-// const shrimpModel = require( "../models/shrimp.js" );
 const db = require( "../models" );
 
 
-// const logger = require( "morgan" );
-
 router.get( "/", function ( req, res ) {
-  db.Shrimp.findAll( {
-    where: {
-      spiciness: "mild"
-    }
-  } ).then( function ( mild ) {
 
-    let mildObj = {
-      mildShrimp: mild
+  db.Shrimp.findAll( {} ).then( function ( menuItems ) {
+
+    let hbsObj = {
+      menuItems: menuItems
     }
-    res.render( "./layouts/partials/mildmenu", mildObj )
+    res.render( "index", hbsObj )
+
   } )
-
-
-
-
-
-  // db.Shrimp.findAll( {
-  //   where: {
-  //     spiciness: "hot"
-  //   }
-  // } ).then( function ( hot ) {
-  //
-  //   let hotObj = {
-  //     hotShrimp: hot
-  //   }
-  //   // res.render( "index", hotObj )
-  // } )
-  //
-  //
-  //
-  //
-  //
-  // db.Shrimp.findAll( {} ).then( function ( buttocks ) {
-  //
-  //   let buttObj = {
-  //     shrimp: shrimp
-  //   }
-  //   res.render( "index", hbsObject )
-  // } )
-
 } ); //end / route
+
 
 
 router.post( "/order", function ( req, res ) {
