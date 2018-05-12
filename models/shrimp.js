@@ -13,7 +13,7 @@ module.exports = function ( sequelize, DataTypes ) {
     spicy: {
       allowNull: false,
       type: DataTypes.BOOLEAN(),
-      defaultValue: false,
+      // defaultValue: false,
       // validate: {
       //   len: [ 1, 50 ]
       // }

@@ -23,14 +23,15 @@ router.get( "/", function ( req, res ) {
 
 router.post( "/order", function ( req, res ) {
   console.log( "that's a shrimptastic choice!" );
-  log( chalk.blue( `req.body.shrimp is: ${req.body.shrimp_name}` ) )
+  log( chalk.blue( `req.body.spiciness is: ${req.body.spiciness}` ) )
 
   db.Shrimp.create( {
     shrimp_name: req.body.shrimp_name,
-    spiciness: req.body.spiciness
+    spicy: req.body.spiciness
   }, function ( error, data ) {
     log( chalk.red( data ) )
   } );
+  res.redirect( "/" )
 } );
 
 

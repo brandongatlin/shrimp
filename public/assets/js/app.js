@@ -13,7 +13,9 @@ $( document ).ready( function () {
     console.log( 'submit clicked' );
 
     const shrimp_name = $( "#input-order" ).val().trim();
-    const spiciness = $( "#spiciness" ).val().trim();
+    const spiciness = $( "#spiciness" ).val();
+
+    console.log( "spiciness is:", spiciness );
 
     const order = {
       shrimp_name: shrimp_name,
@@ -30,7 +32,7 @@ $( document ).ready( function () {
       function () {
         console.log( "ordered", order );
         // Reload the page to get the updated list
-        // location.reload();
+        location.reload();
       }
     );
 
