@@ -22,7 +22,6 @@ router.get( "/", function ( req, res ) {
 
 
 router.post( "/order", function ( req, res ) {
-  console.log( "that's a shrimptastic choice!" );
   log( chalk.blue( `req.body.spiciness is: ${req.body.spiciness}` ) )
 
   db.Shrimp.create( {
