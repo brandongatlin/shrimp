@@ -13,7 +13,7 @@ module.exports = function ( sequelize, DataTypes ) {
     spicy: {
       allowNull: false,
       type: DataTypes.BOOLEAN(),
-      // defaultValue: false,
+      defaultValue: false,
       // validate: {
       //   len: [ 1, 50 ]
       // }
@@ -30,6 +30,15 @@ module.exports = function ( sequelize, DataTypes ) {
       type: DataTypes.INTEGER(),
       defaultValue: 10,
     },
+
+    // ordered: {
+    //   allowNull: false,
+    //   type: DataTypes.BOOLEAN(),
+    //   defaultValue: false,
+    //   // validate: {
+    //   //   len: [ 1, 50 ]
+    //   // }
+    // },
 
   }, {
     timestamps: false

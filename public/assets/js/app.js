@@ -40,5 +40,29 @@ $( document ).ready( function () {
   } );
 
 
+  let total = 0;
+
+  $( document ).on( "click", ".btn-order", function () {
+    const item = $( this ).attr( "item" )
+    const price = parseInt( $( this ).attr( "price" ) )
+
+    console.log( "initial total is:", total )
+
+    const newOrder = {
+      item: item,
+      price: price
+    }
+
+    $( "#cart" ).append(
+      `<li>${newOrder.price}, ${newOrder.item}</li>`
+    )
+    total += newOrder.price;
+    console.log( "new total is:", total )
+
+    $( "#total" ).text( total )
+
+  } )
+
+
 
 } )
