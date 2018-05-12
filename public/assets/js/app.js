@@ -37,7 +37,8 @@ $( document ).ready( function () {
 
   $( document ).on( "click", ".btn-order", function () {
     const item = $( this ).attr( "item" )
-    const price = parseInt( $( this ).attr( "price" ) )
+    const price = parseFloat( $( this ).attr( "price" ) )
+
 
     const newOrder = {
       item: item,
