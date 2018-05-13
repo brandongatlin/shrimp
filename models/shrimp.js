@@ -29,16 +29,9 @@ module.exports = function ( sequelize, DataTypes ) {
       allowNull: false,
       type: DataTypes.DECIMAL( 10, 2 ),
       defaultValue: 10,
-    },
+    }
 
-    // ordered: {
-    //   allowNull: false,
-    //   type: DataTypes.BOOLEAN(),
-    //   defaultValue: false,
-    //   // validate: {
-    //   //   len: [ 1, 50 ]
-    //   // }
-    // },
+
 
   }, {
     timestamps: false

@@ -87,4 +87,10 @@ $( document ).ready( function () {
     $( "#modal-bill" ).append( total.toFixed( 2 ) )
   } )
 
+  $( document ).on( 'hidden.bs.modal', function () {
+    location.reload();
+
+
+  } )
+
 } )
