@@ -3,7 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Lt. Dan's Shrimpboat!</title>
+  <title>Lt. Dan's Shrimpshack!</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/boss.css">
+
 </head>
 
 <body>
@@ -14,7 +17,6 @@
       <h1 class="display-3">Manager Page</h1>
       <p class="lead">Make Permanent Changes to the Menu</p>
       <a class="btn btn-primary" href="/" role="button">Order Page</a>
-
     </div>
 
     <div class="row" id="menu">
@@ -26,7 +28,7 @@
             <ol>
               {{#each menuItems}} {{#unless spicy}}
               <li>
-                <button class="delete" data-id={{this.id}} item={{this.shrimp_name}}>Delete</button>{{this.shrimp_name}}
+                <button class="delete" data-id={{this.id}} item="{{this.shrimp_name}}">Delete</button>{{this.shrimp_name}}
               </li>
               {{/unless}} {{/each}}
             </ol>
@@ -39,7 +41,7 @@
             <ol>
               {{#each menuItems}} {{#if spicy}}
               <li>
-                <button class="delete" data-id={{this.id}} item={{this.shrimp_name}}>Delete</button>{{this.shrimp_name}}
+                <button class="delete" data-id={{this.id}} item="{{this.shrimp_name}}">Delete</button>{{this.shrimp_name}}
               </li>
               {{/if}} {{/each}}
             </ol>

@@ -3,18 +3,18 @@
 }
 
 body {
-  background-image: url("../images/shrimp.jpg");
+  background-image: url("../images/shrimp2.png");
 
 }
 
 .jumbotron {
   background-color: orange;
-  border: .5rem solid black;
+  border: .5rem solid blue;
 
 }
 
 #menu {
-  border: .5rem solid black;
+  border: .5rem solid blue;
 
 }
 

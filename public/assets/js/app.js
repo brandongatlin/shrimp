@@ -51,7 +51,7 @@ $( document ).ready( function () {
     total += newOrder.price;
     console.log( "new total is:", total )
 
-    $( "#total" ).text( total )
+    $( "#total" ).text( total.toFixed( 2 ) )
 
   } )
 

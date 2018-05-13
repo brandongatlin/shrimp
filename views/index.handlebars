@@ -3,7 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Lt. Dan's Shrimpboat!</title>
+  <title>Lt. Dan's Shrimpshack!</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+
 </head>
 
 <body>
@@ -25,7 +28,7 @@
             <ol>
               {{#each menuItems}} {{#unless spicy}}
               <li>
-                <button class="btn-order" data-id={{this.id}} item={{this.shrimp_name}} price={{this.price}}>Add</button>{{this.shrimp_name}} ${{this.price}} {{this.info}}
+                <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button>{{this.shrimp_name}} ${{this.price}} {{this.info}}
               </li>
               {{/unless}} {{/each}}
             </ol>
@@ -38,7 +41,7 @@
             <ol>
               {{#each menuItems}} {{#if spicy}}
               <li>
-                <button class="btn-order" data-id={{this.id}} item={{this.shrimp_name}} price={{this.price}}>Add</button>{{this.shrimp_name}} ${{this.price}} {{this.info}}
+                <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button>{{this.shrimp_name}} ${{this.price}} {{this.info}}
               </li>
               {{/if}} {{/each}}
             </ol>
