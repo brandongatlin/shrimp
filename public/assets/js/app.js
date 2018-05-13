@@ -69,7 +69,6 @@ $( document ).ready( function () {
       crossDomain: true,
       success: function ( result ) {
         // Do something with the result
-        console.log( "success ajax!" );
         location.reload();
 
       }
