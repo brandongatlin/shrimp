@@ -12,9 +12,13 @@ body {
 }
 
 #menu {
-  border: .5rem solid black;
+  border: .2rem solid red;
   width: 100%
 
+}
+
+#main {
+  background-color: white;
 }
 
 #total {
@@ -24,9 +28,11 @@ body {
 }
 
 #hot {
+  border: 1px solid blue;
 }
 
 #mild {
+  border: 1px solid green;
 }
 
 #modal-content {
@@ -39,9 +45,9 @@ body {
 /*notification*/
 .notification {
     position: absolute;
-    right: -300px;
+    right: -350px;
     bottom : 100px;
-    width: 300px;
+    width: 350px;
     height: 75px;
     font-size: 26px;
     background: #0A2239;
@@ -52,10 +58,6 @@ body {
 .notification p{
     padding-left: 15px;
 }
-
-
-
-
 
 .slideInOut{
     animation: slideIO 2s;
