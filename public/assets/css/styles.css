@@ -8,17 +8,12 @@ font-size: 2rem;
 
 body {
   background-image: url("../images/shrimp.jpg");
- overflow-x: hidden;
-}
-
-.jumbotron {
-  background-color: orange;
-  border: .5rem solid black;
-
+  overflow-x: hidden;
 }
 
 #menu {
   border: .5rem solid black;
+  width: 100%
 
 }
 

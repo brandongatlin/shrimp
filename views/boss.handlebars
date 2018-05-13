@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Lt. Dan's Shrimpshack!</title>
+  <title>Lt. Dan's Shrimpboat!</title>
 
   <link rel="stylesheet" type="text/css" href="/assets/css/boss.css">
 
@@ -13,11 +13,13 @@
 
   <div class="container">
 
-    <div class="jumbotron">
+    <div class="header">
       <h1 class="display-3">Manager Page</h1>
       <p class="lead">Make Permanent Changes to the Menu</p>
       <a class="btn btn-primary" href="/" role="button">Order Page</a>
     </div>
+
+
 
     <div class="row" id="menu">
       <div>
@@ -25,13 +27,18 @@
         <div class="col-lg-6">
           <h3>Mild</h3>
           <div id="mild">
-            <ol>
-              {{#each menuItems}} {{#unless spicy}}
-              <li>
-                <button class="delete" data-id={{this.id}} item="{{this.shrimp_name}}">Delete</button>{{this.shrimp_name}}
-              </li>
-              {{/unless}} {{/each}}
-            </ol>
+
+            {{#each menuItems}} {{#unless spicy}}
+            <div class="row">
+              <div class="col-md-2">
+                <button class="delete" data-id={{this.id}} item="{{this.shrimp_name}}">Delete</button>
+              </div>
+              <div class="col-md-10">
+                <div class="menu-item">{{this.shrimp_name}}</div>
+              </div>
+            </div>
+            {{/unless}} {{/each}}
+
           </div>
         </div>
 
@@ -40,9 +47,14 @@
           <div id="hot">
             <ol>
               {{#each menuItems}} {{#if spicy}}
-              <li>
-                <button class="delete" data-id={{this.id}} item="{{this.shrimp_name}}">Delete</button>{{this.shrimp_name}}
-              </li>
+              <div class="row">
+                <div class="col-md-2">
+                  <button class="delete" data-id={{this.id}} item="{{this.shrimp_name}}">Delete</button>
+                </div>
+                <div class="col-md-10">
+                  <div class="menu-item">{{this.shrimp_name}}</div>
+                </div>
+              </div>
               {{/if}} {{/each}}
             </ol>
           </div>
