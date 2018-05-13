@@ -33,7 +33,7 @@
               <div class="col-md-2">
                 <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button></div>
               <div class="col-md-10">
-                <div class="menu-item">{{this.shrimp_name}} ${{this.price}} {{this.info}}</div>
+                <div class="menu-item">{{this.shrimp_name}}<br> ${{this.price}}<br> {{this.info}}</div>
               </div>
             </div>
             {{/unless}} {{/each}}
@@ -49,9 +49,9 @@
               <div class="row">
                 <div class="col-md-2">
                   <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button></div>
-                <div class="col-md-10">
-                  <div class="menu-item">{{this.shrimp_name}} ${{this.price}} {{this.info}}</div>
-                </div>
+                  <div class="col-md-10">
+                    <div class="menu-item">{{this.shrimp_name}}<br> ${{this.price}}<br> {{this.info}}</div>
+                  </div>
               </div>
               {{/if}} {{/each}}
             </ol>
@@ -73,7 +73,7 @@
           <h2> Custom Orders Here! </h2>
 
           <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group">
               <label for="input-order">Order</label>
               <input type="text" class="form-control" id="input-order" placeholder="Order">
             </div>
