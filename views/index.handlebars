@@ -91,7 +91,7 @@
         <div id="cart">
 
           <h4>Total</h4>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Pay</button>
+          <button type="button" id="pay-btn" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Pay</button>
           <p id="total">0.00</p>
         </div>
       </div>
@@ -105,13 +105,10 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Bill</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h2 class="modal-title" id="modal-bill">Your Bill is: $</h2>
       </div>
       <div class="modal-body">
-        <p>We investedin some kind of fruit company and don't need to worry about money anymore. This one's on the house.</p>
+        <h4>We invested in some kind of fruit company and don't need to worry about money anymore. This one's on the house.</h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>

@@ -76,5 +76,8 @@ $( document ).ready( function () {
 
   } );
 
+  $( document ).on( "click", "#pay-btn", function () {
+    $( "#modal-bill" ).append( total )
+  } )
 
 } )
