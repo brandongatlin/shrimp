@@ -36,6 +36,12 @@ $( document ).ready( function () {
   let total = 0;
 
   $( document ).on( "click", ".btn-order", function () {
+
+    $( ".notification" ).addClass( "slideInOut" )
+    setTimeout( function () {
+      $( ".notification" ).removeClass( "slideInOut" )
+    }, 2500 )
+
     const item = $( this ).attr( "item" )
     const price = parseFloat( $( this ).attr( "price" ) )
 
@@ -77,7 +83,8 @@ $( document ).ready( function () {
   } );
 
   $( document ).on( "click", "#pay-btn", function () {
-    $( "#modal-bill" ).append( total )
+
+    $( "#modal-bill" ).append( total.toFixed( 2 ) )
   } )
 
 } )

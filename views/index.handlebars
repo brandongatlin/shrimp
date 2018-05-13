@@ -26,13 +26,15 @@
           <h3>Mild</h3>
           <div id="mild">
 
-              {{#each menuItems}} {{#unless spicy}}
-              <div class="row">
-                <div class="col-md-2">
-                <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button></div><div class="col-md-10"><div class="menu-item">{{this.shrimp_name}} ${{this.price}} {{this.info}}</div>
-                </div>
+            {{#each menuItems}} {{#unless spicy}}
+            <div class="row">
+              <div class="col-md-2">
+                <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button></div>
+              <div class="col-md-10">
+                <div class="menu-item">{{this.shrimp_name}} ${{this.price}} {{this.info}}</div>
               </div>
-              {{/unless}} {{/each}}
+            </div>
+            {{/unless}} {{/each}}
 
           </div>
         </div>
@@ -44,7 +46,9 @@
               {{#each menuItems}} {{#if spicy}}
               <div class="row">
                 <div class="col-md-2">
-                <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button></div><div class="col-md-10"><div class="menu-item">{{this.shrimp_name}} ${{this.price}} {{this.info}}</div>
+                  <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button></div>
+                <div class="col-md-10">
+                  <div class="menu-item">{{this.shrimp_name}} ${{this.price}} {{this.info}}</div>
                 </div>
               </div>
               {{/if}} {{/each}}
@@ -96,26 +100,29 @@
         </div>
       </div>
 
-    </div>
+        <div class="notification"><p id="notification-text">Order Up!</p></div>
 
+    </div>
 
 
     <!-- Modal -->
-<div class="modal" id="myModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="modal-bill">Your Bill is: $</h2>
-      </div>
-      <div class="modal-body">
-        <h4>We invested in some kind of fruit company and don't need to worry about money anymore. This one's on the house.</h4>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
+    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" id="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-bill">Your Bill is: $</h2>
+          </div>
+          <div class="modal-body">
+            <h4>We invested in some kind of fruit company and don't need to worry about money anymore. This one's on the house.</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
-</div>
 </body>
 
 </html>
