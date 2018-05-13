@@ -25,13 +25,15 @@
         <div class="col-lg-6">
           <h3>Mild</h3>
           <div id="mild">
-            <ol>
+
               {{#each menuItems}} {{#unless spicy}}
-              <li>
-                <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button>{{this.shrimp_name}} ${{this.price}} {{this.info}}
-              </li>
+              <div class="row">
+                <div class="col-md-2">
+                <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button></div><div class="col-md-10"><div class="menu-item">{{this.shrimp_name}} ${{this.price}} {{this.info}}</div>
+                </div>
+              </div>
               {{/unless}} {{/each}}
-            </ol>
+
           </div>
         </div>
 
@@ -40,9 +42,11 @@
           <div id="hot">
             <ol>
               {{#each menuItems}} {{#if spicy}}
-              <li>
-                <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button>{{this.shrimp_name}} ${{this.price}} {{this.info}}
-              </li>
+              <div class="row">
+                <div class="col-md-2">
+                <button class="btn-order" data-id={{this.id}} item="{{this.shrimp_name}}" price={{this.price}}>Add</button></div><div class="col-md-10"><div class="menu-item">{{this.shrimp_name}} ${{this.price}} {{this.info}}</div>
+                </div>
+              </div>
               {{/if}} {{/each}}
             </ol>
           </div>
@@ -84,11 +88,10 @@
 
       <div class="col-md-6">
         <h3>Cart:</h3>
-        <div>
-          <ol id="cart">
+        <div id="cart">
 
-          </ol>
-          <h6>Total</h6>
+          <h4>Total</h4>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Pay</button>
           <p id="total">0.00</p>
         </div>
       </div>
@@ -97,7 +100,25 @@
 
 
 
-
+    <!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bill</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>We investedin some kind of fruit company and don't need to worry about money anymore. This one's on the house.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>

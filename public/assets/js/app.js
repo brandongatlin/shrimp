@@ -46,7 +46,7 @@ $( document ).ready( function () {
     }
 
     $( "#cart" ).append(
-      `<li>${newOrder.price}, ${newOrder.item}</li>`
+      `<div class="row"><div class="menu-item">${newOrder.price}, ${newOrder.item}</div></div>`
     )
     total += newOrder.price;
     console.log( "new total is:", total )

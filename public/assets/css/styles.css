@@ -2,6 +2,10 @@
   padding: 1rem;
 }
 
+.menu-item {
+font-size: 2rem;
+}
+
 body {
   background-image: url("../images/shrimp.jpg");
 
@@ -16,6 +20,12 @@ body {
 #menu {
   border: .5rem solid black;
 
+}
+
+#total {
+  font-size: 2rem;
+  font-weight: bold;
+  color: blue;
 }
 
 #hot {
